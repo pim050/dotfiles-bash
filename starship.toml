@@ -19,5 +19,6 @@ disabled = true
 [memory_usage]
 disabled = false
 threshold = -1
-symbol = ' '
+symbol = "\uf2db "
+format = "$symbol[${ram}( | ${swap})]($style) "
 style = 'bold dimmed green'
