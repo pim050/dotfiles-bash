@@ -21,3 +21,4 @@ syntax on
 
 " Set backspace so it acts more intuitively
 set backspace=indent,eol,start
+set number
