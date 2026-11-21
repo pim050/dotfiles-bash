@@ -116,3 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 eval "$(starship init bash)"
+
+alias k='kubectl'
+alias kgp='kubectl get pods'
+source /etc/bash_completion
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
