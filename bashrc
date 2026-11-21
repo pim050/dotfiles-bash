@@ -113,6 +113,8 @@ if ! shopt -oq posix; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  elif [ -f /opt/homebrew/etc/profile.d/bash_completion.sh ]; then
+    . /opt/homebrew/etc/profile.d/bash_completion.sh
   fi
 fi
 eval "$(starship init bash)"
@@ -120,7 +122,6 @@ eval "$(starship init bash)"
 # kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
-source /etc/bash_completion
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 
