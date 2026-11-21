@@ -127,3 +127,4 @@ complete -o default -F __start_kubectl k
 # other groups for aliases
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+export KUBECONFIG=~/.kube/config
