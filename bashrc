@@ -117,8 +117,13 @@ if ! shopt -oq posix; then
 fi
 eval "$(starship init bash)"
 
+# kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
 source /etc/bash_completion
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+
+# other groups for aliases
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
