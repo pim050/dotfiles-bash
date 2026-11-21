@@ -126,5 +126,9 @@ complete -o default -F __start_kubectl k
 
 # other groups for aliases
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+if [[ "$OSTYPE" == darwin* ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+fi
 export KUBECONFIG=~/.kube/config
